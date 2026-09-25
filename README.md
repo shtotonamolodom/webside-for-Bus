@@ -1,2 +1,2 @@
-# webside-for-Bus
+# website-for-Bus
 Сайт для трансфера и перевозок.
