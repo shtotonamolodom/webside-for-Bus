@@ -1,0 +1,386 @@
+/* =========================
+   ОСНОВНЫЕ СТИЛИ
+========================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
+    background: #eeeeee;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: #e6e6fa;
+
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.header-inner {
+    width: 100%;
+    max-width: 1400px;
+
+    min-height: 75px;
+
+    margin: 0 auto;
+    padding: 12px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* Логотип */
+
+.brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-link {
+    color: #1a1d20;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.brand-subtitle {
+    margin-top: 3px;
+
+    color: #555;
+
+    font-size: 13px;
+}
+
+
+/* Навигация */
+
+.nav {
+    color: #333;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* Время работы */
+
+.work-time {
+    padding: 9px 16px;
+
+    color: white;
+    background: #2c2224;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    flex: 1;
+
+    width: 100%;
+
+    background: #eeeeee;
+}
+
+
+/* Hero */
+
+.hero {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 45px 20px 20px;
+
+    text-align: center;
+}
+
+.hero h1 {
+    margin: 0;
+
+    font-size: 38px;
+    line-height: 1.2;
+
+    color: #1f1f1f;
+}
+
+.hero p {
+    margin: 15px 0 0;
+
+    color: #666;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   INFO CARDS
+========================= */
+
+.total_info {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 35px auto 70px;
+
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+/* Карточка */
+
+.info-card {
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #dedede;
+    border-radius: 16px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Заголовки карточек */
+
+.info-card h2 {
+    margin: 0 0 25px;
+
+    font-size: 24px;
+    line-height: 1.3;
+
+    color: #222;
+}
+
+
+/* Список */
+
+.info-card ul {
+    margin: 0;
+
+    padding-left: 22px;
+}
+
+.info-card li {
+    margin-bottom: 12px;
+
+    color: #444;
+
+    line-height: 1.6;
+}
+
+.info-card li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #2c2224;
+
+    color: #f5efeb;
+
+    border-top: 1px solid #444;
+}
+
+.footer-inner {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 50px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 50px;
+}
+
+
+/* Контакты */
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    max-width: 550px;
+}
+
+.contacts h2 {
+    margin: 0 0 10px;
+
+    font-size: 20px;
+}
+
+.contacts a {
+    width: fit-content;
+
+    color: #f5efeb;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.contacts a:hover {
+    color: #e7cda8;
+
+    transform: translateX(4px);
+}
+
+
+/* Логотип футера */
+
+.footer-brand {
+    margin-left: auto;
+}
+
+.footer-brand a {
+    color: #f5efeb;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   АДАПТАЦИЯ
+========================= */
+
+@media (max-width: 800px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 20px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .work-time {
+        align-self: stretch;
+
+        text-align: center;
+    }
+
+
+    .hero {
+        padding-top: 35px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+
+    .total_info {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        margin-bottom: 40px;
+    }
+
+
+    .info-card {
+        padding: 25px;
+    }
+
+
+    .footer-inner {
+        flex-direction: column;
+
+        padding: 40px 20px;
+    }
+
+    .footer-brand {
+        margin-left: 0;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .info-card h2 {
+        font-size: 21px;
+    }
+
+    .info-card {
+        padding: 22px;
+    }
+}

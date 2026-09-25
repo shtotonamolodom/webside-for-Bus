@@ -1,0 +1,733 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   ОСНОВНОЙ ФОН
+   ========================= */
+
+.background {
+    background-color: white;
+    color: #212529;
+
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
+    padding: 0;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.header {
+    color: #1A1D20;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 10px 20px;
+
+    background-color: #E6E6FA;
+
+    border: 2px solid #000000;
+    border-top: none;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    margin-bottom: 20px;
+
+    gap: 20px;
+}
+
+
+/* Логотип */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+.logo a {
+    color: #1A1D20;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-region {
+    font-size: 14px;
+}
+
+
+/* Навигация */
+
+.nav-links {
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 15px;
+
+    width: auto;
+    max-width: 60%;
+}
+
+
+/* Стать водителем */
+
+.become_driver_words {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+
+    text-align: center;
+
+    background-color: #2C2224;
+
+    border-radius: 14px;
+
+    padding: 10px 20px;
+
+    box-shadow: 0 5px 0 black;
+
+    transition: transform 0.4s, box-shadow 0.4s;
+
+    white-space: nowrap;
+}
+
+
+/* Кнопка перехода к футеру */
+
+.jump_fall {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    text-align: center;
+
+    background-color: #2C2224;
+
+    border-radius: 14px;
+
+    padding: 10px 20px;
+
+    box-shadow: 0 5px 0 black;
+
+    margin-left: 0;
+
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+
+/* Hover */
+
+.become_driver_words:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 0 black;
+}
+
+.jump_fall:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 0 black;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero-contaner {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 100%;
+
+    padding: 20px 5%;
+
+    gap: 40px;
+}
+
+
+/* Левая часть */
+
+.box_left {
+    flex: 1;
+
+    min-width: 0;
+    max-width: 55%;
+}
+
+.box_left h1 {
+    margin-top: 0;
+    font-size: clamp(28px, 3vw, 48px);
+    line-height: 1.2;
+}
+
+
+/* Правая часть */
+
+.box_right {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-end;
+
+    flex: 1;
+
+    min-width: 0;
+    max-width: 40%;
+
+    text-align: right;
+}
+
+.box_right h2 {
+    margin-top: 0;
+    font-size: clamp(20px, 2vw, 32px);
+    line-height: 1.3;
+}
+
+.time-size {
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   УСЛУГИ
+   ========================= */
+
+.everything_container {
+    width: 100%;
+
+    padding: 30px 5%;
+}
+
+
+/* Заголовок */
+
+.importmant-h2word {
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    font-size: clamp(24px, 3vw, 36px);
+}
+
+
+/* Контейнер карточек */
+
+.services-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+
+    width: 100%;
+}
+
+
+/* Карточка */
+
+.service-card {
+    min-width: 0;
+
+    background-color: rgb(199, 181, 181);
+
+    border-radius: 30px;
+
+    padding: 20px;
+
+    box-shadow: 0 5px 0 black;
+
+    transition:
+        transform 0.4s,
+        box-shadow 0.4s,
+        background-color 0.4s;
+
+    overflow-wrap: break-word;
+}
+
+
+.service-card h3 {
+    margin-top: 0;
+
+    font-size: 22px;
+    line-height: 1.25;
+}
+
+
+.service-card p {
+    line-height: 1.5;
+}
+
+
+/* Список */
+
+.array {
+    padding-left: 20px;
+}
+
+.array li {
+    margin-bottom: 10px;
+}
+
+
+/* Hover */
+
+.service-card:hover {
+    background-color: antiquewhite;
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 0 black;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.Contact_information {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 100%;
+
+    background-color: #2C2224;
+
+    color: #F5EFEB;
+
+    margin-top: 100px;
+
+    padding: 60px 5%;
+
+    border-top: 2px solid #F5EFEB;
+
+    gap: 50px;
+}
+
+
+/* Контакты */
+
+.contac {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    max-width: 550px;
+
+    min-width: 0;
+}
+
+
+/* Заголовок "Контакты" */
+
+.contac > :first-child {
+    font-size: 24px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+/* Ссылки */
+
+.contac a {
+    display: inline-block;
+
+    color: #F5EFEB;
+
+    text-decoration: none;
+
+    padding: 3px 0;
+
+    transition:
+        color 0.2s,
+        transform 0.2s;
+
+    overflow-wrap: break-word;
+}
+
+
+/* Hover */
+
+.contac a:hover {
+    color: wheat;
+
+    transform: translateX(5px);
+}
+
+
+/* Логотип справа */
+
+.logo_footer {
+    margin-left: auto;
+
+    flex-shrink: 0;
+}
+
+
+.logo_footer a {
+    color: #F5EFEB;
+
+    text-decoration: none;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ПЛАНШЕТЫ И НЕБОЛЬШИЕ НОУТБУКИ
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .header {
+        padding: 10px 15px;
+    }
+
+    .nav-links {
+        max-width: 65%;
+    }
+
+    .hero-contaner {
+        padding: 20px 4%;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .Contact_information {
+        padding: 50px 4%;
+    }
+}
+
+
+/* =========================================================
+   ТЕЛЕФОНЫ И ПЛАНШЕТЫ
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+
+    .header {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 20px;
+
+        gap: 20px;
+    }
+
+
+    .logo {
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    .logo a {
+        font-size: 22px;
+    }
+
+
+    .nav-links {
+        flex-direction: column;
+
+        align-items: stretch;
+        justify-content: center;
+
+        width: 100%;
+        max-width: none;
+
+        gap: 15px;
+    }
+
+
+    .become_driver_words,
+    .jump_fall {
+        width: 100%;
+
+        margin-left: 0;
+
+        white-space: normal;
+
+        padding: 12px 15px;
+    }
+
+
+    /* HERO */
+
+    .hero-contaner {
+        flex-direction: column;
+
+        padding: 20px;
+
+        gap: 30px;
+    }
+
+
+    .box_left,
+    .box_right {
+        width: 100%;
+
+        max-width: none;
+    }
+
+
+    .box_left {
+        text-align: left;
+    }
+
+
+    .box_left h1 {
+        font-size: clamp(26px, 7vw, 36px);
+    }
+
+
+    .box_right {
+        align-items: flex-start;
+
+        text-align: left;
+    }
+
+
+    .box_right h2 {
+        font-size: clamp(20px, 5vw, 28px);
+    }
+
+
+    .time-size {
+        text-align: left;
+    }
+
+
+    /* УСЛУГИ */
+
+    .everything_container {
+        padding: 20px;
+    }
+
+
+    .services-container {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .service-card {
+        width: 100%;
+
+        padding: 20px;
+    }
+
+
+    .service-card h3 {
+        font-size: 21px;
+    }
+
+
+    /* FOOTER */
+
+    .Contact_information {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin-top: 60px;
+
+        padding: 40px 25px;
+
+        gap: 40px;
+    }
+
+
+    .contac {
+        width: 100%;
+
+        max-width: none;
+    }
+
+
+    .logo_footer {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    .logo_footer a {
+        font-size: 24px;
+    }
+}
+
+
+/* =========================================================
+   МАЛЕНЬКИЕ ТЕЛЕФОНЫ
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .header {
+        padding: 15px;
+    }
+
+
+    .logo a {
+        font-size: 20px;
+    }
+
+
+    .logo-region {
+        font-size: 12px;
+    }
+
+
+    .hero-contaner {
+        padding: 15px;
+    }
+
+
+    .box_left h1 {
+        font-size: 26px;
+    }
+
+
+    .box_left p {
+        font-size: 15px;
+    }
+
+
+    .box_right h2 {
+        font-size: 20px;
+    }
+
+
+    .everything_container {
+        padding: 15px;
+    }
+
+
+    .importmant-h2word {
+        font-size: 25px;
+    }
+
+
+    .service-card {
+        padding: 17px;
+
+        border-radius: 22px;
+    }
+
+
+    .service-card h3 {
+        font-size: 19px;
+    }
+
+
+    .service-card p,
+    .array {
+        font-size: 14px;
+    }
+
+
+    .Contact_information {
+        padding: 30px 18px;
+
+        gap: 30px;
+    }
+
+
+    .contac > :first-child {
+        font-size: 21px;
+    }
+
+
+    .contac a {
+        font-size: 14px;
+
+        padding: 6px 0;
+
+        line-height: 1.5;
+    }
+
+
+    .logo_footer a {
+        font-size: 21px;
+    }
+}
+
+
+/* =========================================================
+   УСТРОЙСТВА БЕЗ HOVER
+   ========================================================= */
+
+@media (hover: none) {
+
+    .service-card:hover,
+    .jump_fall:hover,
+    .become_driver_words:hover,
+    .contac a:hover {
+        transform: none;
+    }
+}
